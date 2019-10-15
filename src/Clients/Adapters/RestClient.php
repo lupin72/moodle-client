@@ -48,7 +48,7 @@ class RestClient extends BaseAdapter
             self::OPTION_FORMAT   => $this->responseFormat,
             self::OPTION_TOKEN    => $this->getConnection()->getToken(),
         ];
-
+        dd(array_merge($configuration, $arguments));
         $response = $this->getClient()->post(null, ['body' => array_merge($configuration, $arguments)]);
         $this->handleException($response);
 
