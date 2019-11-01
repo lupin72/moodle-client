@@ -38,7 +38,6 @@ class Course extends Service
         ];
 
         $response = $this->sendRequest('core_course_get_courses_by_field', $arguments);
-
         return $this->getCourseCollection($response['courses']);
     }
 
